@@ -1,1 +1,55 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-primary: rgba(255, 255, 255, 1);
+  --ani-fadeIn: fadeIn 0.3s linear;
+  --ani-fadeInOut: fadeInOut 1s linear infinite;
+
+  --app-padding-bottom: 2.5rem /* 40px */;
+  --app-padding-inline: 1.563rem /* 25px */;
+
+  --zone-bg: rgba(255, 255, 255, 0.75);
+  --zone-text-color: #303030;
+}
+
+[data-theme='night-time'] {
+  --zone-bg: rgba(0, 0, 0, 0.75);
+  --zone-text-color: rgba(255, 255, 255, 1);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}

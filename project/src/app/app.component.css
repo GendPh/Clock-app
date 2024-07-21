@@ -1,0 +1,56 @@
+main {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+
+  padding: 1.938rem 1.563rem 2.5rem /* 31px 25px 40px */;
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  &.day-time {
+    background-image: url('../assets/mobile/bg-mobile-image-daytime.jpg');
+
+    @media (min-width: 768px) {
+      background-image: url('../assets/tablet/bg-tablet-image-daytime.jpg');
+    }
+    @media (min-width: 1280px) {
+      background-image: url('../assets/desktop/bg-desktop-image-daytime.jpg');
+    }
+  }
+  &.night-time {
+    background-image: url('../assets/mobile/bg-mobile-image-nighttime.jpg');
+
+    @media (min-width: 768px) {
+      background-image: url('../assets/tablet/bg-tablet-image-nighttime.jpg');
+    }
+    @media (min-width: 1280px) {
+      background-image: url('../assets/desktop/bg-desktop-image-nighttime.jpg');
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    padding: 5rem 4rem 4rem /* 80px 64px 64px */;
+  }
+  @media only screen and (min-width: 1280px) {
+    padding: 3.5rem 10.313rem 6.125rem /* 56px 165px 98px */;
+  }
+}

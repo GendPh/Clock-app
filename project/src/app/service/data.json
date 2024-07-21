@@ -1,0 +1,115 @@
+{
+  "data": {
+      "ip": "213.22.43.147",
+      "hostname": null,
+      "type": "v4",
+      "range_type": {
+          "type": "PUBLIC",
+          "description": "Public address"
+      },
+      "connection": {
+          "asn": 2860,
+          "organization": "NOS COMUNICACOES, S.A.",
+          "isp": "NOS Comunicacoes S.A.",
+          "range": "213.22.0.0/16"
+      },
+      "location": {
+          "geonames_id": 101752087,
+          "latitude": 38.71675109863281,
+          "longitude": -9.133367538452148,
+          "zip": "1069-203",
+          "continent": {
+              "code": "EU",
+              "name": "Europe",
+              "name_translated": "Europe",
+              "geonames_id": 6255148,
+              "wikidata_id": "Q46"
+          },
+          "country": {
+              "alpha2": "PT",
+              "alpha3": "PRT",
+              "calling_codes": [
+                  "+351"
+              ],
+              "currencies": [
+                  {
+                      "symbol": "€",
+                      "name": "Euro",
+                      "symbol_native": "€",
+                      "decimal_digits": 2,
+                      "rounding": 0,
+                      "code": "EUR",
+                      "name_plural": "Euros",
+                      "type": "fiat"
+                  }
+              ],
+              "emoji": "🇵🇹",
+              "ioc": "POR",
+              "languages": [
+                  {
+                      "name": "Portuguese",
+                      "name_native": "Português"
+                  }
+              ],
+              "name": "Portugal",
+              "name_translated": "Portugal",
+              "timezones": [
+                  "Europe/Lisbon",
+                  "Atlantic/Madeira",
+                  "Atlantic/Azores"
+              ],
+              "is_in_european_union": true,
+              "fips": "PO",
+              "geonames_id": 85633735,
+              "hasc_id": "PT",
+              "wikidata_id": "Q45"
+          },
+          "city": {
+              "fips": null,
+              "alpha2": null,
+              "geonames_id": 101752087,
+              "hasc_id": null,
+              "wikidata_id": "Q597",
+              "name": "Lisbon",
+              "name_translated": "Lisbon"
+          },
+          "region": {
+              "fips": "PO14",
+              "alpha2": "PT-11",
+              "geonames_id": 85687367,
+              "hasc_id": "PT.LI",
+              "wikidata_id": "Q207199",
+              "name": "Lisbon",
+              "name_translated": "Lisbon"
+          }
+      },
+      "tlds": [
+          ".pt"
+      ],
+      "timezone": {
+          "id": "Europe/Lisbon",
+          "current_time": "2024-07-21T11:37:21+01:00",
+          "code": "WEST",
+          "is_daylight_saving": true,
+          "gmt_offset": 3600
+      },
+      "security": {
+          "is_anonymous": null,
+          "is_datacenter": null,
+          "is_vpn": null,
+          "is_bot": null,
+          "is_abuser": null,
+          "is_known_attacker": null,
+          "is_proxy": null,
+          "is_spam": null,
+          "is_tor": null,
+          "proxy_type": null,
+          "is_icloud_relay": null,
+          "threat_score": null
+      },
+      "domains": {
+          "count": null,
+          "domains": []
+      }
+  }
+}
