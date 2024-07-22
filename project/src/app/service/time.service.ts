@@ -60,31 +60,33 @@ export class TimeService {
     const header: HttpHeaders = new HttpHeaders({
       'apikey': 'ipb_live_Win54mAJdNkXnBdM5zW4a2ES28FJOrLY6BTjKRYW'
     });
-
+  
     return this.http.get<Zone>(this.zoneUrl, { headers: header }).pipe(
       map((response: Zone) => {
         const time: time = this.extractHourAndMinute(String(response.data.timezone.current_time));
         this.time.next(time);
         this.currentZone.next(`${response.data.location.city.name}, ${response.data.location.country.alpha2}`);
         let details: Details = {} as Details;
-
+  
         details.entryMessage = this.setMessages(time.hour);
-
-        this.http.get('http://worldtimeapi.org/api/timezone/Europe/Lisbon').subscribe(
+  
+        // Update the URL to HTTPS
+        this.http.get('https://worldtimeapi.org/api/timezone/Europe/Lisbon').subscribe(
           (response: any) => {
             details.currentTimezone = response.timezone;
             details.dayOfYear = response.day_of_year;
             details.dayOfWeek = response.day_of_week + 1;
             details.weekNumber = response.week_number;
-
+  
             this.details.next(details);
           }
         )
-
+  
         return response;
       })
     );
   }
+  
 
   private extractHourAndMinute(timestamp: string): time {
     const date = new Date(timestamp);
