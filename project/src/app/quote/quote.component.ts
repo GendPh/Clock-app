@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Quote, QuoteService } from '../service/quote.service';
 import { CommonModule } from '@angular/common';
+import { TimeService } from '../service/time.service';
 
 @Component({
   selector: 'app-quote',
@@ -14,9 +15,14 @@ export class QuoteComponent implements OnInit {
   public loadingQuote: boolean = true;
   public quote: Quote | undefined;
 
+  public moreShown: boolean = false;
+
   public clickReload: boolean = true;
 
-  constructor(private quoteService: QuoteService) {
+  constructor(private quoteService: QuoteService, private timeService: TimeService) {
+    this.timeService.showMore$.subscribe(showMore => {
+      this.moreShown = showMore;
+    });
   }
 
   ngOnInit(): void {
@@ -26,7 +32,7 @@ export class QuoteComponent implements OnInit {
   loadQuote() {
     this.loadingQuote = true;
     this.clickReload = true;
-    
+
     this.quoteService.loadQuote().subscribe(
       {
         next: (quote) => {

@@ -15,6 +15,10 @@
   line-height: 1.375rem /* 22px */;
   font-weight: 700;
 
+  &.hidden {
+    display: none;
+  }
+
   #quote {
     margin-bottom: 0.5rem /* 8px */;
     font-weight: 400;
@@ -48,9 +52,8 @@
       margin-bottom: 0.813rem /* 13px */;
     }
 
-    button{
+    button {
       margin-top: 0.604rem /* 9.67px */;
-    
     }
   }
 }

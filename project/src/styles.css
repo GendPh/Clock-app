@@ -16,11 +16,26 @@
 
   --zone-bg: rgba(255, 255, 255, 0.75);
   --zone-text-color: #303030;
+  --zone-border-left-color: rgba(48, 48, 48, 0.25);
+}
+
+@media only screen and (min-width: 768px) {
+  :root {
+    --app-padding-bottom: 4rem /* 64px */;
+    --app-padding-inline: 4rem /* 64px */;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  :root {
+    --app-padding-bottom: 6.125rem /* 98px */;
+    --app-padding-inline: 10.313rem /* 165px */;
+  }
 }
 
 [data-theme='night-time'] {
   --zone-bg: rgba(0, 0, 0, 0.75);
   --zone-text-color: rgba(255, 255, 255, 1);
+  --zone-border-left-color: rgba(255, 255, 255, 0.25);
 }
 
 body {

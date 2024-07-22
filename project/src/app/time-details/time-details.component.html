@@ -10,15 +10,15 @@
         </svg>
 
         <figcaption>
-          good morning
+          <p>{{details.entryMessage}}<span>, IT’S CURRENTLY</span></p>
         </figcaption>
       </figure>
 
       <h1>
-        <span id="hour">11</span>:<span id="min">37</span><span id="bst">bst</span>
+        <span id="hour">{{time.hour}}</span>:<span id="min">{{time.minute}}</span><span id="bst">bst</span>
       </h1>
 
-      <h2>in london, uk</h2>
+      <h2>in {{currentZone}}</h2>
     </div>
 
     <button (click)="toggleShowMore()">
@@ -32,27 +32,27 @@
   </article>
 
 
-  <article id="zone-details" > <!-- data-theme="night-time" -->
+  <article id="zone-details" attr.data-theme="{{theme}}">
 
     <div class="wrapper">
       <div class="info">
         <p>current timezone</p>
-        <h3>Europe/London</h3>
+        <h3>{{details.currentTimezone}}</h3>
       </div>
       <div class="info">
         <p>day of the year</p>
-        <h3>295</h3>
+        <h3>{{details.dayOfYear}}</h3>
       </div>
     </div>
 
     <div class="wrapper">
       <div class="info">
         <p>day of the week</p>
-        <h3>5</h3>
+        <h3>{{details.dayOfWeek}}</h3>
       </div>
       <div class="info">
         <p>week number</p>
-        <h3>42</h3>
+        <h3>{{details.weekNumber}}</h3>
       </div>
     </div>
 

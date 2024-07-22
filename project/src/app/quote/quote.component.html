@@ -1,5 +1,5 @@
 <section>
-  <article id="quote-container">
+  <article id="quote-container" [ngClass]="{'hidden':moreShown}">
 
     <div>
       @if (!loadingQuote && quote) {
